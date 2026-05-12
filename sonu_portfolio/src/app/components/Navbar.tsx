@@ -57,7 +57,7 @@ export default function Navbar() {
           ))}
           <li>
             <a
-              href="https://drive.google.com/file/d/1lTwl_mQSFfNv9vad6g-O4EiGMjcH0o8Y/view?usp=sharing"
+              href={process.env.NEXT_PUBLIC_RESUME}
               target="_blank"
               rel="noopener noreferrer"
               className={styles.resumeBtn}
