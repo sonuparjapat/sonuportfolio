@@ -68,22 +68,33 @@ const techBadges = [
 export default function Skills() {
   const barsRef = useRef(null)
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.querySelectorAll('[data-width]').forEach(bar => {
-              bar.style.width = bar.getAttribute('data-width') + '%'
-            })
-          }
-        })
-      },
-      { threshold: 0.2 }
-    )
-    if (barsRef.current) observer.observe(barsRef.current)
-    return () => observer.disconnect()
-  }, [])
+ useEffect(() => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const bars = entry.target.querySelectorAll('[data-width]')
+
+          bars.forEach((bar) => {
+            const element = bar as HTMLElement
+            const width = element.getAttribute('data-width')
+
+            if (width) {
+              element.style.width = `${width}%`
+            }
+          })
+        }
+      })
+    },
+    { threshold: 0.2 }
+  )
+
+  if (barsRef.current) {
+    observer.observe(barsRef.current)
+  }
+
+  return () => observer.disconnect()
+}, [])
 
   return (
     <section id="skills" className={styles.skills}>
