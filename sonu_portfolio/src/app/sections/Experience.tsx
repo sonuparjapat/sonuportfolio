@@ -71,8 +71,8 @@ export default function Experience() {
           <div className={`card ${styles.eduCard}`}>
             <div className={styles.eduIcon}>🎓</div>
             <div>
-              <h4 className={styles.eduDegree}>Bachelor of Technology / Engineering</h4>
-              <p className={styles.eduSchool}>Computer Science & Engineering</p>
+              <h4 className={styles.eduDegree}>Bachelor of Science</h4>
+              <p className={styles.eduSchool}>Non Medical</p>
               <p className={styles.eduYear}>2018 — 2022</p>
             </div>
           </div>
@@ -90,7 +90,7 @@ export default function Experience() {
               </div>
             </div>
             <a
-              href="https://media.licdn.com/dms/image/v2/D4D22AQEP__lYkmJnRg/feedshare-shrink_800/feedshare-shrink_800/0/1701925413099?e=1779926400&v=beta&t=6RDM2WdDTD2gTT9PFtJ4Z8WRYNR9W15Iif_mSY7vk_w"
+              href="https://drive.google.com/file/d/1LqbmYXivX6BOT7O3vKycleafBCg-0Kv6/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.certLink}
